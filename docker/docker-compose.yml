@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    image: local
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - example.env
